@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+
+  <link rel="icon" type="image/png" href="{{ 'images/robot.png' | url }}">
+{% endblock %}
+
+
+{% block footer %}
+
+  <!-- =========================================================
+       저작권 보호 안내
+       ========================================================= -->
+
+  <div class="copyright-notice">
+    <div class="copyright-notice__inner">
+
+  <span class="copyright-notice__icon">⚠️</span>
+
+  <span class="copyright-notice__text">
+
+    <strong>저작권 보호 안내</strong>
+
+    <strong class="copyright-notice__warning">
+      본 사이트의 강의자료 및 교육 콘텐츠는 저작권법 및 관련 계약에 따라 보호됩니다.
+      무단 복제·배포·공유·재사용 및 다른 강의에서의 활용을 금지합니다.
+      Copyright © 이충현. All rights reserved.
+    </strong>
+
+  </span>
+
+  <a href="{{ 'copyright/' | url }}"
+     class="copyright-notice__link">
+    자세히 보기
+  </a>
+
+</div>
+
+  </div>
+
+  <!-- =========================================================
+       Material for MkDocs 기본 Footer 대신 사용자 Footer
+       ========================================================= -->
+
+  <div class="custom-footer">
+    <div class="custom-footer__inner">
+
+  <span class="custom-footer__copyright">
+    © 2026 Tutor 이충현
+  </span>
+
+  <a href="{{ 'analytics/' | url }}"
+     class="custom-footer__link">
+    이용 통계 안내
+  </a>
+
+</div>
+
+  </div>
+
+{% endblock %}

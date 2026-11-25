@@ -644,3 +644,55 @@
     }
 
 }
+
+
+
+/* =========================================================
+   저작권 보호 - 인쇄 및 PDF 저장 방지
+   Ctrl + P / 브라우저 인쇄 기능 대응
+   ========================================================= */
+
+@media print {
+
+    /* A4 인쇄 설정 */
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    /* 기존 웹페이지 전체 숨김 */
+    body > * {
+        display: none !important;
+    }
+
+    /* 저작권 안내만 인쇄 */
+    body::before {
+
+        content:
+            "저작권 보호 안내\A\A"
+            "본 강의자료는 저작권 보호 대상입니다.\A"
+            "인쇄 및 PDF 저장은 허용되지 않습니다.\A\A"
+            "Copyright © 2026 이충현. All rights reserved.";
+
+        display: block !important;
+
+        white-space: pre-line;
+
+        position: fixed;
+        top: 38%;
+        left: 5%;
+
+        width: 90%;
+
+        text-align: center;
+
+        font-size: 18pt;
+        font-weight: bold;
+        line-height: 2;
+
+        color: #b00020 !important;
+        background: #ffffff !important;
+
+        z-index: 999999;
+    }
+}
